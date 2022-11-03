@@ -7,7 +7,7 @@ pipeline {
     stages {
          stage('Cloning from GitHub') {
                 steps {
-                    git branch: 'main', url: 'https://github.com/KlaiGhassen/devops'
+                    git branch: 'main', url: 'https://github.com/ihebmbarki/Devops-Spring.git'
                 }
                 
             }
@@ -38,9 +38,9 @@ pipeline {
             steps {
         
     sh "mvn sonar:sonar \
-  -Dsonar.projectKey=sonar2 \
+  -Dsonar.projectKey=sonar \
   -Dsonar.host.url=http://192.168.33.10:9000 \
-  -Dsonar.login=e69bd39e2c859839518eead6cb3dd3f8df69d0c0 -DskipTests"
+  -Dsonar.login=c1b1c39f0ba6e01cbb9c403e6eb6697f76a807bf"
 
     }
         }
